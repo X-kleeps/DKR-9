@@ -1,0 +1,126 @@
+object fEdit: TfEdit
+  Left = 508
+  Height = 345
+  Top = 241
+  Width = 354
+  Caption = 'Редактор'
+  ClientHeight = 345
+  ClientWidth = 354
+  DesignTimePPI = 120
+  OnShow = FormShow
+  LCLVersion = '2.2.4.0'
+  object FioLabel: TLabel
+    Left = 18
+    Height = 20
+    Top = 8
+    Width = 33
+    Caption = 'ФИО'
+    ParentColor = False
+  end
+  object TelefonLabel: TLabel
+    Left = 16
+    Height = 20
+    Top = 76
+    Width = 60
+    Caption = 'Телефон'
+    ParentColor = False
+  end
+  object PolLabel: TLabel
+    Left = 16
+    Height = 20
+    Top = 144
+    Width = 28
+    Caption = 'Пол'
+    ParentColor = False
+  end
+  object ClassLabel: TLabel
+    Left = 18
+    Height = 20
+    Top = 216
+    Width = 39
+    Caption = 'Класс'
+    ParentColor = False
+  end
+  object bSave: TBitBtn
+    Left = 16
+    Height = 38
+    Top = 288
+    Width = 144
+    Caption = 'Сохранить'
+    Default = True
+    Kind = bkYes
+    ModalResult = 1
+    TabOrder = 0
+  end
+  object bCancel: TBitBtn
+    Left = 208
+    Height = 38
+    Top = 288
+    Width = 134
+    Cancel = True
+    Caption = 'Не сохранять'
+    Kind = bkCancel
+    ModalResult = 2
+    TabOrder = 1
+  end
+  object FIO: TDBEdit
+    Left = 16
+    Height = 28
+    Top = 40
+    Width = 312
+    DataField = 'ФИО'
+    DataSource = fMain.DataSource1
+    MaxLength = 0
+    TabOrder = 2
+  end
+  object Nomber: TDBEdit
+    Left = 16
+    Height = 28
+    Top = 106
+    Width = 125
+    DataField = 'Номер_телефона'
+    DataSource = fMain.DataSource1
+    MaxLength = 0
+    TabOrder = 3
+  end
+  object Pol: TDBComboBox
+    Left = 16
+    Height = 28
+    Top = 176
+    Width = 125
+    DataField = 'Пол'
+    DataSource = fMain.DataSource1
+    ItemHeight = 20
+    Items.Strings = (
+      'Мужской'
+      'Женский'
+      'Не определился'
+    )
+    MaxLength = 0
+    TabOrder = 4
+  end
+  object Cls: TDBComboBox
+    Left = 16
+    Height = 28
+    Top = 248
+    Width = 125
+    DataField = 'Класс'
+    DataSource = fMain.DataSource1
+    ItemHeight = 20
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+      '6'
+      '7'
+      '8'
+      '9'
+      '10'
+      '11'
+    )
+    MaxLength = 0
+    TabOrder = 5
+  end
+end
